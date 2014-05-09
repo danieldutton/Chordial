@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ABB6D6A2-6B73-45F3-B551-4B3A52BDAD71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.UnitTests", "Chordial.UnitTests\Chordial.UnitTests.csproj", "{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.IntegrationTests", "Chordial.IntegrationTests\Chordial.IntegrationTests.csproj", "{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2} = {ABB6D6A2-6B73-45F3-B551-4B3A52BDAD71}
+		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17} = {ABB6D6A2-6B73-45F3-B551-4B3A52BDAD71}
+	EndGlobalSection
+EndGlobal
