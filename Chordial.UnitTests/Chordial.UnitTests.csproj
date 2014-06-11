@@ -45,11 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Foo.cs" />
-    <Compile Include="FretBoardTemplate\SixStringAcousticFretBoard_Should.cs" />
     <Compile Include="FretBoardBuilder_Should.cs" />
+    <Compile Include="FretBoard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FretBoardTemplate\SixStringElectricFretBoard_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

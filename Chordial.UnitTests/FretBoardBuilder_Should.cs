@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Chordial.FretBoardTemplate.Model;
+using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace Chordial.UnitTests
 {
@@ -7,160 +9,483 @@ namespace Chordial.UnitTests
     public class FretBoardBuilder_Should
     {
         [Test]
-        public void GetNoteFreeFretBoard_EightColoumnsOnFretBoard()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetFretBoard_ThrowArgumentOutOfRangeEx_IfStringsLessThan1()
         {
-            //0 for open string, 1 for note press
+            var sut = new FretBoardBuilder();
 
-            var aMinorBuilder = new AminorBuilder();
-            int[,] grid = aMinorBuilder.GetAMinorChords();
-
-            //how long do we want the complete fretboard?
-            Assert.AreEqual(8, grid.GetLongLength(0));
-
-            //how do we represent mute strings
-            //value 2 maybe
+            sut.GetFretBoard(strings: 0);
         }
 
         [Test]
-        public void GetNoteFreeFretBoard_SixRowsOnFretBoard()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetFretBoard_ThrowArgumentOutOfRangeEx_IfFretsLessThan1()
         {
-            var aMinorBuilder = new AminorBuilder();
-            int[,] grid = aMinorBuilder.GetAMinorChords();
+            var sut = new FretBoardBuilder();
 
-            Assert.AreEqual(5, grid.GetLongLength(1));
+            sut.GetFretBoard(frets: 0);
         }
+
+        [Test]
+        public void GetFretBoard_WithSixStringsByDefault()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] fretBoard = sut.GetFretBoard();
+
+            Assert.AreEqual(6, fretBoard.GetLength(0));
+        }
+
+        [Test]
+        public void GetFretBoard_WithTwentyOneFretsByDefault()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] fretBoard = sut.GetFretBoard();
+
+            Assert.AreEqual(21, fretBoard.GetLength(1));
+        }
+
+        [Test]
+        public void GetFretBoard_WithFourStrings()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] fretBoard = sut.GetFretBoard(strings: 6, frets: 20);
+
+            Assert.AreEqual(6, fretBoard.GetLength(0));
+        }
+
+        [Test]
+        public void GetFretBoard_WithSixStrings()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] fretBoard = sut.GetFretBoard(strings: 6, frets: 20);
+
+            Assert.AreEqual(6, fretBoard.GetLength(0));
+        }
+
+        [Test]
+        public void GetFretBoard_WithTwelveStrings()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] fretBoard = sut.GetFretBoard(strings: 6, frets: 20);
+
+            Assert.AreEqual(6, fretBoard.GetLength(0));
+        }
+
+        [Test]
+        public void GetFretBoard_With21FretSpaces()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] fretBoard = sut.GetFretBoard(strings: 6, frets: 10);
+
+            Assert.AreEqual(10, fretBoard.GetLength(1));
+        }
+
+        [Test]
+        public void GetFretBoard_AllInstancesAreOfType_Note()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[] fretBoard = sut.GetFretBoard(strings:6, frets: 10)
+                .Cast<Note>()
+                .ToArray();
+
+            CollectionAssert.AllItemsAreInstancesOfType(fretBoard, typeof(Note));
+        }
+
+        #region string 1
+
+        //should string positions be changed to exclude 0 to avoid confusion
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_0()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(0, result[0, 0].FretPositionX);
+            Assert.AreEqual(0, result[0, 0].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_1()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(0, result[0, 1].FretPositionX);
+            Assert.AreEqual(1, result[0, 1].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_2()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(0, result[0, 2].FretPositionX);
+            Assert.AreEqual(2, result[0, 2].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_3()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(0, result[0, 3].FretPositionX);
+            Assert.AreEqual(3, result[0, 3].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_4()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(0, result[0, 4].FretPositionX);
+            Assert.AreEqual(4, result[0, 4].FretPositionY);
+        }
+
+        #endregion
+
+        #region string 2
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_0()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(1, result[1, 0].FretPositionX);
+            Assert.AreEqual(0, result[1, 0].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_1()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(1, result[1, 1].FretPositionX);
+            Assert.AreEqual(1, result[1, 1].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_2()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(1, result[1, 2].FretPositionX);
+            Assert.AreEqual(2, result[1, 2].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_3()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(1, result[1, 3].FretPositionX);
+            Assert.AreEqual(3, result[1, 3].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_4()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(1, result[1, 4].FretPositionX);
+            Assert.AreEqual(4, result[1, 4].FretPositionY);
+        }
+
+        #endregion
+
+        #region string 3
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_0()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(2, result[2, 0].FretPositionX);
+            Assert.AreEqual(0, result[2, 0].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_1()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(2, result[2, 1].FretPositionX);
+            Assert.AreEqual(1, result[2, 1].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_2()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(2, result[2, 2].FretPositionX);
+            Assert.AreEqual(2, result[2, 2].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_3()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(2, result[2, 3].FretPositionX);
+            Assert.AreEqual(3, result[2, 3].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_4()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(2, result[2, 4].FretPositionX);
+            Assert.AreEqual(4, result[2, 4].FretPositionY);
+        }
+
+        #endregion
+
+        #region string 4
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_0()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(3, result[3, 0].FretPositionX);
+            Assert.AreEqual(0, result[3, 0].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_1()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(3, result[3, 1].FretPositionX);
+            Assert.AreEqual(1, result[3, 1].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_2()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(3, result[3, 2].FretPositionX);
+            Assert.AreEqual(2, result[3, 2].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_3()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(3, result[3, 3].FretPositionX);
+            Assert.AreEqual(3, result[3, 3].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_4()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(3, result[3, 4].FretPositionX);
+            Assert.AreEqual(4, result[3, 4].FretPositionY);
+        }
+
+        #endregion
+
+        #region string 5
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_0()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(4, result[4, 0].FretPositionX);
+            Assert.AreEqual(0, result[4, 0].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_1()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(4, result[4, 1].FretPositionX);
+            Assert.AreEqual(1, result[4, 1].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_2()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(4, result[4, 2].FretPositionX);
+            Assert.AreEqual(2, result[4, 2].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_3()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(4, result[4, 3].FretPositionX);
+            Assert.AreEqual(3, result[4, 3].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_4()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(4, result[4, 4].FretPositionX);
+            Assert.AreEqual(4, result[4, 4].FretPositionY);
+        }
+
+        #endregion
+
+        #region string 6
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_0()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(5, result[5, 0].FretPositionX);
+            Assert.AreEqual(0, result[5, 0].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_1()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(5, result[5, 1].FretPositionX);
+            Assert.AreEqual(1, result[5, 1].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_2()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(5, result[5, 2].FretPositionX);
+            Assert.AreEqual(2, result[5, 2].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_3()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(5, result[5, 3].FretPositionX);
+            Assert.AreEqual(3, result[5, 3].FretPositionY);
+        }
+
+        [Test]
+        public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_4()
+        {
+            var sut = new FretBoardBuilder();
+
+            Note[,] result = sut.GetFretBoard(strings: 6, frets: 5);
+
+            Assert.AreEqual(5, result[5, 4].FretPositionX);
+            Assert.AreEqual(4, result[5, 4].FretPositionY);
+        }
+
+        #endregion
     }
 
-    //AbstractFretBoard Structure
+    //we need to take into account the open notes.  The first column of the array should be used for this purpose
+    //start drawing the actual grid from one onwards
+
     /*
-          0  1  2  3  4  5  6  7  8
-     E(0)[ ][ ][ ][ ][ ][*][ ][ ][ ]
-     B(1)[*][ ][ ][ ][ ][*][ ][ ][ ]
-     G(2)[ ][*][ ][ ][ ][*][ ][ ][ ]
-     D(3)[ ][*][ ][ ][ ][*][ ][*][ ]
-     A(4)[ ][ ][ ][ ][ ][*][ ][*][ ]
-     E(5)[ ][ ][ ][ ][ ][*][ ][ ][ ]
-     
-     */
-}
-
-public class AminorBuilder
-{
-    public int[,] GetAMinorChords()
+     * The pitch of each consecutive fret is defined at a half-step interval on the chromatic scale. 
+     * Standard classical guitars have 19 frets and electric guitars between 21 to 24 frets, although guitars 
+     * have been made with as many as 27 frets
+     * */
+    
+    public class FretBoardBuilder
     {
-        var aMinor1 = new int[8, 5];
+        private Note[,] _notes; //shouldnt this really be local
 
-        //should chords be separated for separate display or placed on 
-        //one fretboard.  Seperate Method maybe.  
-        aMinor1[0, 1] = 1;
-        aMinor1[1, 2] = 1;
-        aMinor1[1, 3] = 1;
-
-        aMinor1[5, 0] = 1;
-        aMinor1[5, 1] = 1;
-        aMinor1[5, 2] = 1;
-        aMinor1[5, 3] = 1;
-        aMinor1[7, 3] = 1;
-        aMinor1[7, 4] = 1;
-
-        return aMinor1;
-
-        //do we need multiple fretboard lengths
-        //20 frets on average for an acoustic
-
-        //24 to 26 for an electric
-    }
-}
-
-public interface INoteBuilder
-{
-    void BuildNotes();
-}
-
-public class NoteBuilder : INoteBuilder
-{
-    public void BuildNotes()
-    {
-        throw new NotImplementedException();
-    }
-}
-
-public enum NoteStatus
-{
-    Open,
-    Pressed,
-    Mute,
-}
-
-/*
- Need to check the theory behind note naming i.e should it be a sharp or a flat etc
- * Do we need to represent both sharp and flat at the same time to avoid confusion
- */
-
-/*
- Further ideas
- * 
- * Can note store wav file we can play and listen to.  Can we record the chord and listen to that also
- 
- */
-
-public class Program
-{
-    private static void Main()
-    {
-        NoteSetter.SetNotes(0, 0);
-
-        Console.ReadKey();
-    }
-}
-
-public class Note
-{
-    public string NoteValue { get; set; }
-}
-
-#region Sets string Note Values
-
-public static class NoteSetter
-{
-    private static readonly Note[,] FretBoard = new Note[6, 20];
-
-    public static Note[,] SetNotes(int stringNo, int noteStartIndex)
-    {
-        for (int i = 0; i < FretBoard.GetLength(0); i++)
+        public Note[,] GetFretBoard(int strings = 6, int frets = 21)
         {
-            for (int j = 0; j < FretBoard.GetLength(1); j++)
+            if(strings < 1) throw new ArgumentOutOfRangeException("strings");
+            if(frets < 1) throw new ArgumentOutOfRangeException("frets");
+            
+            _notes = new Note[strings, frets];
+
+            for (int i = 0; i < _notes.GetLength(0); i++)
             {
-                FretBoard[i, j] = new Note();
+                for (int j = 0; j < _notes.GetLength(1); j++)
+                {
+                    _notes[i, j] = new Note
+                    {
+                        FretPositionX = i,
+                        FretPositionY = j,
+                    };
+                }
             }
+            return _notes;
         }
-
-        string[] notes = Enum.GetNames(typeof (NoteValues));
-
-        int noteCount = 0;
-        for (int i = 0; i < FretBoard.GetLength(1); i++) // count is 20
-        {
-            if (noteCount == 7)
-                noteCount = 0;
-
-            FretBoard[stringNo, i].NoteValue = notes[noteCount];
-
-            noteCount++;
-        }
-
-        return FretBoard;
     }
 }
-
-public enum NoteValues
-{
-    A,
-    B,
-    C,
-    D,
-    E,
-    F,
-    G,
-}
-
-#endregion
