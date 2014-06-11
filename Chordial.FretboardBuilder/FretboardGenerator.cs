@@ -1,6 +1,6 @@
-﻿using System;
-using Chordial.FretboardBuilder.Interfaces;
+﻿using Chordial.FretboardBuilder.Interfaces;
 using Chordial.FretboardBuilder.Model;
+using System;
 
 namespace Chordial.FretboardBuilder
 {

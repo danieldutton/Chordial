@@ -1,7 +1,4 @@
-﻿using Chordial.FretboardBuilder;
-using Chordial.FretboardBuilder.Model;
-using Chordial.UnitTests;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 
 namespace Chordial.UnitTests

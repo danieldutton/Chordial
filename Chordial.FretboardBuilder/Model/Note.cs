@@ -1,6 +1,6 @@
 ﻿namespace Chordial.FretboardBuilder.Model
 {
-    public class Note
+    public struct Note
     {
         public NoteName NoteName { get; set; }
         

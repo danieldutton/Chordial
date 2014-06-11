@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using Chordial.FretboardBuilder;
+﻿using Chordial.FretboardBuilder;
 using Chordial.FretboardBuilder.Model;
 using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace Chordial.UnitTests
 {
@@ -40,11 +40,11 @@ namespace Chordial.UnitTests
         }
 
         [Test]
-        public void GetFretBoard_WithTwentyOneFretsByDefault()
+        public void GetFretBoard_WithTwentyFourFretsByDefault()
         {
             Note[,] fretBoard = _sut.GetFretBoard();
 
-            Assert.AreEqual(21, fretBoard.GetLength(1));
+            Assert.AreEqual(24, fretBoard.GetLength(1));
         }
 
         [Test]
@@ -89,9 +89,8 @@ namespace Chordial.UnitTests
             CollectionAssert.AllItemsAreInstancesOfType(fretBoard, typeof(Note));
         }
 
-        #region string 1
+        //String 1 - ELow
 
-        //should string positions be changed to exclude 0 to avoid confusion
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_0()
         {
@@ -137,9 +136,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[0, 4].FretPositionY);
         }
 
-        #endregion
-
-        #region string 2
+        //String 2 - A
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_0()
@@ -186,9 +183,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[1, 4].FretPositionY);
         }
 
-        #endregion
-
-        #region string 3
+        //String 3 - D
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_0()
@@ -235,9 +230,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[2, 4].FretPositionY);
         }
 
-        #endregion
-
-        #region string 4
+        //String 4 - G
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_0()
@@ -284,9 +277,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[3, 4].FretPositionY);
         }
 
-        #endregion
-
-        #region string 5
+        //String 5 - B
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_0()
@@ -333,9 +324,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[4, 4].FretPositionY);
         }
 
-        #endregion
-
-        #region string 6
+        //String 6 - EHigh
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_0()
@@ -381,8 +370,6 @@ namespace Chordial.UnitTests
             Assert.AreEqual(5, result[5, 4].FretPositionX);
             Assert.AreEqual(4, result[5, 4].FretPositionY);
         }
-
-        #endregion
 
         [TearDown]
         public void TearDown()

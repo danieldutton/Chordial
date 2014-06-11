@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.Presentation", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.FretboardBuilder", "Chordial.FretboardBuilder\Chordial.FretboardBuilder.csproj", "{FE522BF9-A297-4481-B683-2FF45FC9F468}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.Sandbox", "Chordial.Sandbox\Chordial.Sandbox.csproj", "{80D5ECDF-E6DE-4AAC-80A3-B68AAC726DFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.NoteBuilder", "Chordial.NoteGenerator\Chordial.NoteBuilder.csproj", "{3ACDDF64-37F4-4CF1-9344-1D499944F99D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{FE522BF9-A297-4481-B683-2FF45FC9F468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE522BF9-A297-4481-B683-2FF45FC9F468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE522BF9-A297-4481-B683-2FF45FC9F468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D5ECDF-E6DE-4AAC-80A3-B68AAC726DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D5ECDF-E6DE-4AAC-80A3-B68AAC726DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D5ECDF-E6DE-4AAC-80A3-B68AAC726DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D5ECDF-E6DE-4AAC-80A3-B68AAC726DFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
