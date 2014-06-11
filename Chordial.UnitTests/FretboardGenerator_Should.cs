@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using Chordial.FretboardBuilder;
+using Chordial.FretboardBuilder.Model;
 using NUnit.Framework;
 using System;
 
 namespace Chordial.UnitTests
 {
     [TestFixture]
-    public class FretBoardBuilder_Should
+    public class FretboardGenerator_Should
     {
         private FretboardGenerator _sut;
 

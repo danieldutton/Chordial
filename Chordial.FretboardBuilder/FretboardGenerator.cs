@@ -1,4 +1,6 @@
 ﻿using System;
+using Chordial.FretboardBuilder.Interfaces;
+using Chordial.FretboardBuilder.Model;
 
 namespace Chordial.FretboardBuilder
 {
@@ -8,14 +10,14 @@ namespace Chordial.FretboardBuilder
     /*
      * The pitch of each consecutive fret is defined at a half-step interval on the chromatic scale. 
      * Standard classical guitars have 19 frets and electric guitars between 21 to 24 frets, although guitars 
-     * have been made with as many as 27 frets
+     * have been made with as many as 27 frets. 20 is our minimum 24 is our maximum
      * */
 
-    public class FretboardGenerator
+    public class FretboardGenerator : IFretBoardGenerator
     {
         private Note[,] _notes; //shouldnt this really be local
 
-        public Note[,] GetFretBoard(int strings = 6, int frets = 21)
+        public Note[,] GetFretBoard(int strings = 6, int frets = 24)
         {
             if (strings < 1) throw new ArgumentOutOfRangeException("strings");
             if (frets < 1) throw new ArgumentOutOfRangeException("frets");
@@ -38,7 +40,7 @@ namespace Chordial.FretboardBuilder
     }
 }
 
-//AbstractFretBoard Structure
+//Fretboard Structure
 /*
       0  1  2  3  4  5  6  7  8
  E(0)[ ][ ][ ][ ][ ][*][ ][ ][ ]

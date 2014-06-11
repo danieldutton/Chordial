@@ -32,16 +32,15 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FretboardGenerator.cs" />
-    <Compile Include="Note.cs" />
-    <Compile Include="NoteName.cs" />
+    <Compile Include="Interfaces\IFretBoardGenerator.cs" />
+    <Compile Include="Instruments\AcousticGuitar.cs" />
+    <Compile Include="Instruments\ElectricGuitar.cs" />
+    <Compile Include="Model\Note.cs" />
+    <Compile Include="Model\NoteName.cs" />
+    <Compile Include="NoteSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FretBoardBuilder_Should.cs" />
+    <Compile Include="FretboardGenerator_Should.cs" />
     <Compile Include="FretBoard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

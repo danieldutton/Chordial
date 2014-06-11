@@ -1,4 +1,6 @@
 ﻿using Chordial.FretboardBuilder;
+using Chordial.FretboardBuilder.Model;
+using Chordial.UnitTests;
 using NUnit.Framework;
 using System;
 
@@ -105,59 +107,7 @@ public enum NoteStatus
  
  */
 
-public class Program
-{
-    private static void Main()
-    {
-        NoteSetter.SetNotes(0, 0);
-
-        Console.ReadKey();
-    }
-}
 
 
-#region Sets string Note Values
 
-public static class NoteSetter
-{
-    private static readonly Note[,] FretBoard = new Note[6, 20];
 
-    public static Note[,] SetNotes(int stringNo, int noteStartIndex)
-    {
-        for (int i = 0; i < FretBoard.GetLength(0); i++)
-        {
-            for (int j = 0; j < FretBoard.GetLength(1); j++)
-            {
-                FretBoard[i, j] = new Note();
-            }
-        }
-
-        string[] notes = Enum.GetNames(typeof (NoteValues));
-
-        int noteCount = 0;
-        for (int i = 0; i < FretBoard.GetLength(1); i++) // count is 20
-        {
-            if (noteCount == 7)
-                noteCount = 0;
-
-            //FretBoard[stringNo, i].NoteValue = notes[noteCount];
-
-            noteCount++;
-        }
-
-        return FretBoard;
-    }
-}
-
-public enum NoteValues
-{
-    A,
-    B,
-    C,
-    D,
-    E,
-    F,
-    G,
-}
-
-#endregion

@@ -1,4 +1,4 @@
-﻿namespace Chordial.FretboardBuilder
+﻿namespace Chordial.FretboardBuilder.Model
 {
     public enum NoteName
     {
