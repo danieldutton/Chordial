@@ -1,5 +1,5 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
 
 namespace Chordial.UnitTests
 {
@@ -7,7 +7,7 @@ namespace Chordial.UnitTests
     public class FretBoardBuilder_Should
     {
         [Test]
-        public void GetFretBoard_EightColoumnsOnFretBoard()
+        public void GetNoteFreeFretBoard_EightColoumnsOnFretBoard()
         {
             //0 for open string, 1 for note press
 
@@ -22,7 +22,7 @@ namespace Chordial.UnitTests
         }
 
         [Test]
-        public void GetFretBoard_SixRowsOnFretBoard()
+        public void GetNoteFreeFretBoard_SixRowsOnFretBoard()
         {
             var aMinorBuilder = new AminorBuilder();
             int[,] grid = aMinorBuilder.GetAMinorChords();
@@ -31,8 +31,7 @@ namespace Chordial.UnitTests
         }
     }
 
-
-    //FretBoard Structure
+    //AbstractFretBoard Structure
     /*
           0  1  2  3  4  5  6  7  8
      E(0)[ ][ ][ ][ ][ ][*][ ][ ][ ]
@@ -73,37 +72,6 @@ public class AminorBuilder
     }
 }
 
-public class FretBoardBuilder
-{
-    public FretBoardBuilder()
-    {
-        
-    }
-
-    public Note[,] GetFretBoard(GuitarType guitarType)
-    {
-        if (!Enum.IsDefined(typeof(GuitarType), guitarType))
-            guitarType = GuitarType.Acoustic;
-        
-        const int numOfStrings = 6;
-
-        Note[,] fretBoard = new Note[(int) guitarType, numOfStrings];
-
-        //srp put in dedicated note builder class
-        for (int i = 0; i < fretBoard.GetLongLength(0); i++)
-        {
-            for (int j = 0; j < fretBoard.GetLongLength(1); i++)
-            {
-                fretBoard[i, j] = new Note();
-            }
-        }
-
-        //need to add individual note values here
-
-        return fretBoard;
-    }
-}
-
 public interface INoteBuilder
 {
     void BuildNotes();
@@ -117,50 +85,17 @@ public class NoteBuilder : INoteBuilder
     }
 }
 
-public enum GuitarType
-{
-    Acoustic = 20,  //fret count
-    Electric = 24,
-}
-
 public enum NoteStatus
-    {
-        Open, 
-        Pressed, 
-        Mute,
-    }
-
+{
+    Open,
+    Pressed,
+    Mute,
+}
 
 /*
  Need to check the theory behind note naming i.e should it be a sharp or a flat etc
  * Do we need to represent both sharp and flat at the same time to avoid confusion
  */
-public enum NoteName
-{
-    A,
-    BFlat,
-    B,
-    C,
-    CSharp,
-    D,
-    DSharp,
-    E,
-    ESharp,
-    F,
-    FSharp,
-    G,
-    GSharp,
-}
-
-public class Note
-{
-    public NoteName NoteName { get; set; }
-    public int FretPositionX { get; set; }
-    public int FretPositionY { get; set; }
-    public string ResourceName { get; set; }
-    public int OctaveLevel { get; set; }
-
-}
 
 /*
  Further ideas
@@ -169,3 +104,63 @@ public class Note
  
  */
 
+public class Program
+{
+    private static void Main()
+    {
+        NoteSetter.SetNotes(0, 0);
+
+        Console.ReadKey();
+    }
+}
+
+public class Note
+{
+    public string NoteValue { get; set; }
+}
+
+#region Sets string Note Values
+
+public static class NoteSetter
+{
+    private static readonly Note[,] FretBoard = new Note[6, 20];
+
+    public static Note[,] SetNotes(int stringNo, int noteStartIndex)
+    {
+        for (int i = 0; i < FretBoard.GetLength(0); i++)
+        {
+            for (int j = 0; j < FretBoard.GetLength(1); j++)
+            {
+                FretBoard[i, j] = new Note();
+            }
+        }
+
+        string[] notes = Enum.GetNames(typeof (NoteValues));
+
+        int noteCount = 0;
+        for (int i = 0; i < FretBoard.GetLength(1); i++) // count is 20
+        {
+            if (noteCount == 7)
+                noteCount = 0;
+
+            FretBoard[stringNo, i].NoteValue = notes[noteCount];
+
+            noteCount++;
+        }
+
+        return FretBoard;
+    }
+}
+
+public enum NoteValues
+{
+    A,
+    B,
+    C,
+    D,
+    E,
+    F,
+    G,
+}
+
+#endregion

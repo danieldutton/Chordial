@@ -5,6 +5,6 @@ namespace Chordial.IntegrationTests
     [TestFixture]
     public class Class1
     {
-        
+            
     }
 }

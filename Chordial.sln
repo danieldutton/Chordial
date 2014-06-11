@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.UnitTests", "Chord
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.IntegrationTests", "Chordial.IntegrationTests\Chordial.IntegrationTests.csproj", "{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.FretBoardTemplate", "Chordial.FretBoardTemplate\Chordial.FretBoardTemplate.csproj", "{B8F789D1-FB8F-4BC3-A10E-39944A2FB533}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0CC38FB-262E-41E1-8B78-D2131FCE2E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F789D1-FB8F-4BC3-A10E-39944A2FB533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F789D1-FB8F-4BC3-A10E-39944A2FB533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F789D1-FB8F-4BC3-A10E-39944A2FB533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F789D1-FB8F-4BC3-A10E-39944A2FB533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
