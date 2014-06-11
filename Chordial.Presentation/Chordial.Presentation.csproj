@@ -81,9 +81,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chordial.FretBoardTemplate\Chordial.FretBoardTemplate.csproj">
-      <Project>{B8F789D1-FB8F-4BC3-A10E-39944A2FB533}</Project>
-      <Name>Chordial.FretBoardTemplate</Name>
+    <ProjectReference Include="..\Chordial.FretboardBuilder\Chordial.FretboardBuilder.csproj">
+      <Project>{FE522BF9-A297-4481-B683-2FF45FC9F468}</Project>
+      <Name>Chordial.FretboardBuilder</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

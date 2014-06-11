@@ -1,4 +1,4 @@
-﻿using Chordial.FretBoardTemplate.Model;
+﻿using Chordial.FretboardBuilder;
 using NUnit.Framework;
 using System;
 

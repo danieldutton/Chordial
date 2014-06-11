@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using Chordial.FretBoardTemplate.Model;
+using Chordial.FretboardBuilder;
 
 namespace Chordial.Presentation
 {
