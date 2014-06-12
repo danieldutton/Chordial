@@ -34,8 +34,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GuitarBuilder.cs" />
-    <Compile Include="Interfaces\IInstrumentBuilder.cs" />
+    <Compile Include="GuitarLuthier.cs" />
+    <Compile Include="Interfaces\ILuthier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

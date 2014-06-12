@@ -3,8 +3,20 @@ using System;
 
 namespace Chordial.UnitTests
 {
+
+    //Fretboard Structure
+    /*
+          0  1  2  3  4  5  6  7  8
+     E(0)[ ][ ][ ][ ][ ][*][ ][ ][ ]
+     B(1)[*][ ][ ][ ][ ][*][ ][ ][ ]
+     G(2)[ ][*][ ][ ][ ][*][ ][ ][ ]
+     D(3)[ ][*][ ][ ][ ][*][ ][*][ ]
+     A(4)[ ][ ][ ][ ][ ][*][ ][*][ ]
+     E(5)[ ][ ][ ][ ][ ][*][ ][ ][ ]
+     
+     */
     [TestFixture]
-    public class FretBoard
+    public class SandBox
     {
         [Test]
         public void GetNoteFreeFretBoard_EightColoumnsOnFretBoard()

@@ -40,8 +40,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Luthier\FretboardGenerator_Should.cs" />
-    <Compile Include="Luthier\FretBoard.cs" />
+    <Compile Include="Luthier\GuitarLuthier_Should.cs" />
+    <Compile Include="Sandbox\SandBox.cs" />
     <Compile Include="Mother.cs" />
     <Compile Include="Tuner\NoteGenerator_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
