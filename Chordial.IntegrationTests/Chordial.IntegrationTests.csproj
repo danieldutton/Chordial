@@ -45,16 +45,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Chordial.FretboardBuilder\Chordial.FretboardBuilder.csproj">
-      <Project>{FE522BF9-A297-4481-B683-2FF45FC9F468}</Project>
-      <Name>Chordial.FretboardBuilder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Chordial.NoteGenerator\Chordial.NoteBuilder.csproj">
-      <Project>{3ACDDF64-37F4-4CF1-9344-1D499944F99D}</Project>
-      <Name>Chordial.NoteBuilder</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

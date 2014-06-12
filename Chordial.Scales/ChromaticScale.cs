@@ -8,26 +8,27 @@ namespace Chordial.Scales
 {
     public class ChromaticScale : IScaleGenerator
     {
-        public List<string> GetScale(Scale scale)
+        public IEnumerable<string> GetScale(Scale scale)
         {
             if (!Enum.IsDefined(typeof(Scale), scale))
                 scale = Scale.A;
 
-            List<string> values = Enum.GetNames(typeof(Scale)).ToList();
+            List<string> notes = Enum.GetNames(typeof(Scale)).ToList();
 
             var orderedValues = new List<string>();
+            
             int counter = 0;
 
-            for (int i = (int)scale; i <= values.Count; i++)
+            for (int i = (int)scale; i <= notes.Count; i++)
             {
                 counter++;
 
-                if (i == values.Count)
+                if (i == notes.Count)
                     i = 0;
 
-                orderedValues.Add(values[i]);
+                orderedValues.Add(notes[i]);
 
-                if (counter == values.Count)
+                if (counter == notes.Count)
                     break;
             }
             return orderedValues;

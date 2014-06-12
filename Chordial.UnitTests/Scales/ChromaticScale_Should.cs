@@ -18,107 +18,107 @@ namespace Chordial.UnitTests.Scales
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScaleA_IfEnumIsUndefined()
+        public void GetScale_ReturnChromaticScaleA_IfEnumIsUndefined()
         {
             const Scale undefinedScale = new Scale();
 
-            List<string> scale = _sut.GetScale(undefinedScale);
+            IEnumerable<string> scale = _sut.GetScale(undefinedScale);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_A()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_A()
+        public void GetScale_ReturnChromaticScale_A()
         {
-            List<string> scale = _sut.GetScale(Scale.A);
+            IEnumerable<string> scale = _sut.GetScale(Scale.A);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_A()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_ASharp()
+        public void GetScale_ReturnChromaticScale_ASharp()
         {
-            List<string> scale = _sut.GetScale(Scale.ASharp);
+            IEnumerable<string> scale = _sut.GetScale(Scale.ASharp);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_ASharp()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_B()
+        public void GetScale_ReturnChromaticScale_B()
         {
-            List<string> scale = _sut.GetScale(Scale.B);
+            IEnumerable<string> scale = _sut.GetScale(Scale.B);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_B()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_C()
+        public void GetScale_ReturnChromaticScale_C()
         {
-            List<string> scale = _sut.GetScale(Scale.C);
+            IEnumerable<string> scale = _sut.GetScale(Scale.C);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_C()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_CSharp()
+        public void GetScale_ReturnChromaticScale_CSharp()
         {
-            List<string> scale = _sut.GetScale(Scale.CSharp);
+            IEnumerable<string> scale = _sut.GetScale(Scale.CSharp);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_CSharp()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_D()
+        public void GetScale_ReturnChromaticScale_D()
         {
-            List<string> scale = _sut.GetScale(Scale.D);
+            IEnumerable<string> scale = _sut.GetScale(Scale.D);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_D()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_DSharp()
+        public void GetScale_ReturnChromaticScale_DSharp()
         {
-            List<string> scale = _sut.GetScale(Scale.DSharp);
+            IEnumerable<string> scale = _sut.GetScale(Scale.DSharp);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_DSharp()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_E()
+        public void GetScale_ReturnChromaticScale_E()
         {
-            List<string> scale = _sut.GetScale(Scale.E);
+            IEnumerable<string> scale = _sut.GetScale(Scale.E);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_E()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_F()
+        public void GetScale_ReturnChromaticScale_F()
         {
-            List<string> scale = _sut.GetScale(Scale.F);
+            IEnumerable<string> scale = _sut.GetScale(Scale.F);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_F()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_FSharp()
+        public void GetScale_ReturnChromaticScale_FSharp()
         {
-            List<string> scale = _sut.GetScale(Scale.FSharp);
+            IEnumerable<string> scale = _sut.GetScale(Scale.FSharp);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_FSharp()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_G()
+        public void GetScale_ReturnChromaticScale_G()
         {
-            List<string> scale = _sut.GetScale(Scale.G);
+            IEnumerable<string> scale = _sut.GetScale(Scale.G);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_G()));
         }
 
         [Test]
-        public void GetNotes_ReturnChromaticScale_GSharp()
+        public void GetScale_ReturnChromaticScale_GSharp()
         {
-            List<string> scale = _sut.GetScale(Scale.GSharp);
+            IEnumerable<string> scale = _sut.GetScale(Scale.GSharp);
 
             Assert.IsTrue(scale.SequenceEqual(Mother.ChromaticScale_GSharp()));
         }

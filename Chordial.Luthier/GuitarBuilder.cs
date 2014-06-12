@@ -1,8 +1,8 @@
-﻿using Chordial.FretboardBuilder.Interfaces;
-using Chordial.FretboardBuilder.Model;
+﻿using Chordial.Luthier.Interfaces;
+using Chordial.Tuner.Model;
 using System;
 
-namespace Chordial.FretboardBuilder
+namespace Chordial.Luthier
 {
     //we need to take into account the open notes.  The first column of the array should be used for this purpose
     //start drawing the actual grid from one onwards
@@ -13,11 +13,11 @@ namespace Chordial.FretboardBuilder
      * have been made with as many as 27 frets. 20 is our minimum 24 is our maximum
      * */
 
-    public class FretboardGenerator : IFretBoardGenerator
+    public class GuitarBuilder : IInstrumentBuilder
     {
         private Note[,] _notes; //shouldnt this really be local
 
-        public Note[,] GetFretBoard(int strings = 6, int frets = 24)
+        public Note[,] GetInstrument(int strings = 6, int frets = 24)
         {
             if (strings < 1) throw new ArgumentOutOfRangeException("strings");
             if (frets < 1) throw new ArgumentOutOfRangeException("frets");

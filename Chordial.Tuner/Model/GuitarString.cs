@@ -1,4 +1,4 @@
-﻿namespace Chordial.FretboardBuilder.Model
+﻿namespace Chordial.Tuner.Model
 {
     //some clarity needed with numbering. 0 shouldnt really be there we need 1-6
     public enum GuitarString

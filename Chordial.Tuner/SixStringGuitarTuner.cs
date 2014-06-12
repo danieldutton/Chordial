@@ -1,26 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using Chordial.FretboardBuilder.Model;
-using Chordial.NoteBuilder.Interfaces;
+﻿using Chordial.Scales.Interfaces;
 using Chordial.Scales.Model;
+using Chordial.Tuner.Interfaces;
+using Chordial.Tuner.Model;
+using System;
 
-namespace Chordial.NoteBuilder
+namespace Chordial.Tuner
 {
-    public class NoteGenerator : INoteGenerator
+    //we are just tuning a string one at a time
+    public class SixStringGuitarTuner : IGuitarTuner
     {
-        private IList<string> _notes;
+        private readonly IScaleGenerator _scaleGenerator;
 
-        public NoteGenerator(IList<string> notes)
+        public SixStringGuitarTuner(IScaleGenerator scaleGenerator)
         {
-            _notes = notes;
+            _scaleGenerator = scaleGenerator;
         }
 
-        public void GenerateNotes(GuitarString startString, Note[,] fretboard)
+        public void TuneString(GuitarString guitarString, Note[,] fretboard)
         {
             //get the collection of notes we need to iterate over
-            _notes = Enum.GetNames(typeof(Scale));
-
-            //init the start index for the string start note
+            string[] _notes = Enum.GetNames(typeof(Scale));
 
             //set the iterate counter to the length of the fretboard
             const int fretLength = 24;
@@ -38,15 +37,14 @@ namespace Chordial.NoteBuilder
                     break;
 
                 //if we have ran out of notes
-                if (i == _notes.Count)
+                if (i == _notes.Length)
                 {
                     //then run through the notes again
                     i = 0;
                 }
-                int f = (int) startString;
+                int f = (int) guitarString;
                 //write out the note for that fret
                 fretboard[f, i].Scale = _notes[i];
-                Console.WriteLine(_notes[i]);
             }    
         }      
     }

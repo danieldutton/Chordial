@@ -1,4 +1,4 @@
-﻿namespace Chordial.FretboardBuilder.Model
+﻿namespace Chordial.Tuner.Model
 {
     public struct Note
     {

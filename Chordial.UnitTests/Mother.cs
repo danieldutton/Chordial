@@ -6,132 +6,132 @@ namespace Chordial.UnitTests
     {
         public static List<string> GetOpenStringNotes()
         {
-            var noteList = new List<string>
+            var notes = new List<string>
             {
                 "ELow", "A", "D", "G", "B", "EHigh",
             };
 
-            return noteList;
+            return notes;
         }
 
         public static List<string> ChromaticScale_A()
         {
-            var scale = new List<string>
+            var scaleA = new List<string>
             {
                 "A", "ASharp", "B", "C", "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", "GSharp",
             };
 
-            return scale;
+            return scaleA;
         }
 
         public static List<string> ChromaticScale_ASharp()
         {
-            var scale = new List<string>
+            var scaleASharp = new List<string>
             {
                 "ASharp", "B", "C", "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", "GSharp", "A",
             };
 
-            return scale;
+            return scaleASharp;
         }
 
         public static List<string> ChromaticScale_B()
         {
-            var scale = new List<string>
+            var scaleB = new List<string>
             {
                 "B", "C", "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", "GSharp","A", "ASharp", 
             };
 
-            return scale;
+            return scaleB;
         }
 
         public static List<string> ChromaticScale_C()
         {
-            var scale = new List<string>
+            var scaleC = new List<string>
             {
                 "C", "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", "GSharp","A", "ASharp", "B", 
             };
 
-            return scale;
+            return scaleC;
         }
 
         public static List<string> ChromaticScale_CSharp()
         {
-            var scale = new List<string>
+            var scaleCSharp = new List<string>
             {
                 "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", "GSharp","A", "ASharp", "B", "C",
             };
 
-            return scale;
+            return scaleCSharp;
         }
 
         public static List<string> ChromaticScale_D()
         {
-            var scale = new List<string>
+            var scaleD = new List<string>
             {
                 "D", "DSharp", "E", "F", "FSharp", "G", "GSharp", "A", "ASharp", "B", "C", "CSharp",
             };
 
-            return scale;
+            return scaleD;
         }
 
         public static List<string> ChromaticScale_DSharp()
         {
-            var scale = new List<string>
+            var scaleDSharp = new List<string>
             {
                 "DSharp", "E", "F", "FSharp", "G", "GSharp", "A", "ASharp", "B", "C", "CSharp", "D", 
             };
 
-            return scale;
+            return scaleDSharp;
         }
 
         public static List<string> ChromaticScale_E()
         {
-            var scale = new List<string>
+            var scaleE = new List<string>
             {
                 "E", "F", "FSharp", "G", "GSharp", "A", "ASharp", "B", "C", "CSharp", "D", "DSharp", 
             };
 
-            return scale;
+            return scaleE;
         }
 
         public static List<string> ChromaticScale_F()
         {
-            var scale = new List<string>
+            var scaleF = new List<string>
             {
                 "F", "FSharp", "G", "GSharp", "A", "ASharp", "B", "C", "CSharp", "D", "DSharp", "E", 
             };
 
-            return scale;
+            return scaleF;
         }
 
         public static List<string> ChromaticScale_FSharp()
         {
-            var scale = new List<string>
+            var scaleFSharp = new List<string>
             {
                 "FSharp", "G", "GSharp", "A", "ASharp", "B", "C", "CSharp", "D", "DSharp", "E", "F", 
             };
 
-            return scale;
+            return scaleFSharp;
         }
 
         public static List<string> ChromaticScale_G()
         {
-            var scale = new List<string>
+            var scaleG = new List<string>
             {
                 "G", "GSharp", "A", "ASharp", "B", "C", "CSharp", "D", "DSharp", "E", "F", "FSharp", 
             };
 
-            return scale;
+            return scaleG;
         }
 
         public static List<string> ChromaticScale_GSharp()
         {
-            var scale = new List<string>
+            var scaleGSharp = new List<string>
             {
                 "GSharp", "A", "ASharp", "B", "C", "CSharp", "D", "DSharp", "E", "F", "FSharp", "G", 
             };
 
-            return scale;
+            return scaleGSharp;
         }
     }
 }
