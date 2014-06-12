@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Chordial.Presentation")]
+[assembly: AssemblyTitle("Chordial.Scales")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Chordial.Presentation")]
+[assembly: AssemblyProduct("Chordial.Scales")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2bc97e88-07ac-43fd-b4a2-a8607288bc18")]
+[assembly: Guid("a7f990ac-6d56-4abd-971c-5e58cae58ea4")]
 
 // Version information for an assembly consists of the following four values:
 //

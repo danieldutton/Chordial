@@ -1,16 +1,15 @@
-﻿namespace Chordial.FretboardBuilder.Model
+﻿namespace Chordial.Scales.Model
 {
-    public enum NoteName
+    public enum Scale
     {
         A,
-        BFlat,
+        ASharp,
         B,
         C,
         CSharp,
         D,
         DSharp,
         E,
-        ESharp,
         F,
         FSharp,
         G,

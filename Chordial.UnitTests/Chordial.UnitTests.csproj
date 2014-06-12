@@ -40,10 +40,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FretboardGenerator_Should.cs" />
-    <Compile Include="FretBoard.cs" />
+    <Compile Include="FretboardBuilder\FretboardGenerator_Should.cs" />
+    <Compile Include="FretboardBuilder\FretBoard.cs" />
+    <Compile Include="Mother.cs" />
+    <Compile Include="NoteBuilder\NoteGenerator_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SixStringGuitarSetter_Should.cs" />
+    <Compile Include="Scales\ChromaticScale_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -53,7 +55,12 @@
       <Project>{FE522BF9-A297-4481-B683-2FF45FC9F468}</Project>
       <Name>Chordial.FretboardBuilder</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chordial.Scales\Chordial.Scales.csproj">
+      <Project>{CAEC2B80-9562-4E2A-9F5D-A375864A8BAF}</Project>
+      <Name>Chordial.Scales</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

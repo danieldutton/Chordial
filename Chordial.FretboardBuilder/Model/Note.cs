@@ -2,7 +2,7 @@
 {
     public struct Note
     {
-        public NoteName NoteName { get; set; }
+        public string Scale { get; set; }
         
         public int FretPositionX { get; set; }
         

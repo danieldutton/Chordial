@@ -39,7 +39,7 @@
     <Compile Include="Instruments\AcousticGuitar.cs" />
     <Compile Include="Instruments\ElectricGuitar.cs" />
     <Compile Include="Model\Note.cs" />
-    <Compile Include="Model\NoteName.cs" />
+    <Compile Include="Model\GuitarString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

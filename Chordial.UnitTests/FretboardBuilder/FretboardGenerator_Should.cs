@@ -1,10 +1,10 @@
-﻿using Chordial.FretboardBuilder;
+﻿using System;
+using System.Linq;
+using Chordial.FretboardBuilder;
 using Chordial.FretboardBuilder.Model;
 using NUnit.Framework;
-using System;
-using System.Linq;
 
-namespace Chordial.UnitTests
+namespace Chordial.UnitTests.FretboardBuilder
 {
     [TestFixture]
     public class FretboardGenerator_Should
@@ -89,7 +89,7 @@ namespace Chordial.UnitTests
             CollectionAssert.AllItemsAreInstancesOfType(fretBoard, typeof(Note));
         }
 
-        //String 1 - ELow
+        //GuitarString 1 - ELow
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_0_0()
@@ -136,7 +136,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[0, 4].FretPositionY);
         }
 
-        //String 2 - A
+        //GuitarString 2 - A
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_1_0()
@@ -183,7 +183,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[1, 4].FretPositionY);
         }
 
-        //String 3 - D
+        //GuitarString 3 - D
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_2_0()
@@ -230,7 +230,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[2, 4].FretPositionY);
         }
 
-        //String 4 - G
+        //GuitarString 4 - G
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_3_0()
@@ -277,7 +277,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[3, 4].FretPositionY);
         }
 
-        //String 5 - B
+        //GuitarString 5 - B
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_4_0()
@@ -324,7 +324,7 @@ namespace Chordial.UnitTests
             Assert.AreEqual(4, result[4, 4].FretPositionY);
         }
 
-        //String 6 - EHigh
+        //GuitarString 6 - EHigh
 
         [Test]
         public void GetFretBoard_InitNoteFretPositionPropertiesCorrectly_5_0()

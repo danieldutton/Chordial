@@ -1,14 +1,13 @@
 ﻿using NUnit.Framework;
 
-namespace Chordial.UnitTests
+namespace Chordial.UnitTests.NoteBuilder
 {
     [TestFixture]
-    public class SixStringGuitarSetter_Should
+    public class NoteGenerator_Should
     {
         [Test]
         public void Foo()
         {
-            
         }
     }
 }
