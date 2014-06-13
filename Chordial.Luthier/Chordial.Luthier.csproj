@@ -36,12 +36,14 @@
   <ItemGroup>
     <Compile Include="GuitarLuthier.cs" />
     <Compile Include="Interfaces\ILuthier.cs" />
+    <Compile Include="Model\FretSpace.cs" />
+    <Compile Include="Model\GuitarString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chordial.Tuner\Chordial.Tuner.csproj">
-      <Project>{3ACDDF64-37F4-4CF1-9344-1D499944F99D}</Project>
-      <Name>Chordial.Tuner</Name>
+    <ProjectReference Include="..\Chordial.Utility\Chordial.Utility.csproj">
+      <Project>{7468D14E-A2C9-4C78-A715-A64605DE8362}</Project>
+      <Name>Chordial.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

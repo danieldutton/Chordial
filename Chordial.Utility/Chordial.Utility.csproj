@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82076EFB-EB6F-45F6-ABC9-C882DC7CCCE2}</ProjectGuid>
+    <ProjectGuid>{7468D14E-A2C9-4C78-A715-A64605DE8362}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chordial.UnitTests</RootNamespace>
-    <AssemblyName>Chordial.UnitTests</AssemblyName>
+    <RootNamespace>Chordial.Utility</RootNamespace>
+    <AssemblyName>Chordial.Utility</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,47 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Luthier\GuitarLuthier_Should.cs" />
-    <Compile Include="Luthier\Model\FretSpace_Should.cs" />
-    <Compile Include="Sandbox\SandBox.cs" />
-    <Compile Include="Mother.cs" />
-    <Compile Include="Tuner\NoteGenerator_Should.cs" />
+    <Compile Include="Interfaces\IPlottable.cs" />
+    <Compile Include="Interfaces\IResourceConsumer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scales\ChromaticScale_Should.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Chordial.Luthier\Chordial.Luthier.csproj">
-      <Project>{FE522BF9-A297-4481-B683-2FF45FC9F468}</Project>
-      <Name>Chordial.Luthier</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Chordial.Scales\Chordial.Scales.csproj">
-      <Project>{CAEC2B80-9562-4E2A-9F5D-A375864A8BAF}</Project>
-      <Name>Chordial.Scales</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Chordial.Tuner\Chordial.Tuner.csproj">
-      <Project>{3ACDDF64-37F4-4CF1-9344-1D499944F99D}</Project>
-      <Name>Chordial.Tuner</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Chordial.Utility\Chordial.Utility.csproj">
-      <Project>{7468D14E-A2C9-4C78-A715-A64605DE8362}</Project>
-      <Name>Chordial.Utility</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utility\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

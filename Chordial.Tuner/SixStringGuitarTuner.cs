@@ -1,12 +1,12 @@
-﻿using Chordial.Scales.Interfaces;
+﻿using Chordial.Luthier.Model;
+using Chordial.Scales.Interfaces;
 using Chordial.Scales.Model;
 using Chordial.Tuner.Interfaces;
-using Chordial.Tuner.Model;
 using System;
+using System.Collections.Generic;
 
 namespace Chordial.Tuner
 {
-    //we are just tuning a string one at a time
     public class SixStringGuitarTuner : IGuitarTuner
     {
         private readonly IScaleGenerator _scaleGenerator;
@@ -16,9 +16,10 @@ namespace Chordial.Tuner
             _scaleGenerator = scaleGenerator;
         }
 
-        public void TuneString(GuitarString guitarString, Note[,] fretboard)
+        public void TuneString(GuitarString guitarString, FretSpace[,] fretboard)
         {
             //get the collection of notes we need to iterate over
+            IEnumerable<string> result = _scaleGenerator.GetScale(Scale.A);
             string[] _notes = Enum.GetNames(typeof(Scale));
 
             //set the iterate counter to the length of the fretboard
@@ -44,7 +45,7 @@ namespace Chordial.Tuner
                 }
                 int f = (int) guitarString;
                 //write out the note for that fret
-                fretboard[f, i].Scale = _notes[i];
+                fretboard[f, i].Note = _notes[i];
             }    
         }      
     }

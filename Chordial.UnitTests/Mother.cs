@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Chordial.UnitTests
 {
     public static class Mother
     {
-        public static List<string> GetOpenStringNotes()
+        public static List<string> GetOpenNotes()
         {
             var notes = new List<string>
             {
@@ -133,5 +134,13 @@ namespace Chordial.UnitTests
 
             return scaleGSharp;
         }
+
+        //lets use this to simplify luther tests
+        public static IEnumerable<int> FretBoardXPosSequence()
+        {
+            IEnumerable<int> range = Enumerable.Range(0, 24);
+
+            return range;
+        } 
     }
 }

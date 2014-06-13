@@ -1,9 +1,9 @@
-﻿using Chordial.Tuner.Model;
+﻿using Chordial.Luthier.Model;
 
 namespace Chordial.Luthier.Interfaces
 {
     public interface ILuthier
     {
-        Note[,] BuildInstrument(int strings = 6, int frets = 21);
+        FretSpace[,] BuildInstrument(int strings = 6, int frets = 21);
     }
 }

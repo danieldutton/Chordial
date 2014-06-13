@@ -13,25 +13,25 @@ namespace Chordial.Scales
             if (!Enum.IsDefined(typeof(Scale), scale))
                 scale = Scale.A;
 
-            List<string> notes = Enum.GetNames(typeof(Scale)).ToList();
+            List<string> scaleNotes = Enum.GetNames(typeof(Scale)).ToList();
 
-            var orderedValues = new List<string>();
+            var chromaticScale = new List<string>();
             
             int counter = 0;
 
-            for (int i = (int)scale; i <= notes.Count; i++)
+            for (int i = (int)scale; i <= scaleNotes.Count; i++)
             {
                 counter++;
 
-                if (i == notes.Count)
+                if (i == scaleNotes.Count)
                     i = 0;
 
-                orderedValues.Add(notes[i]);
+                chromaticScale.Add(scaleNotes[i]);
 
-                if (counter == notes.Count)
+                if (counter == scaleNotes.Count)
                     break;
             }
-            return orderedValues;
+            return chromaticScale;
         }
     }
 }

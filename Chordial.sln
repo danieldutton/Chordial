@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.Luthier", "Chordia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.Tuner", "Chordial.Tuner\Chordial.Tuner.csproj", "{3ACDDF64-37F4-4CF1-9344-1D499944F99D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chordial.Utility", "Chordial.Utility\Chordial.Utility.csproj", "{7468D14E-A2C9-4C78-A715-A64605DE8362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ACDDF64-37F4-4CF1-9344-1D499944F99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7468D14E-A2C9-4C78-A715-A64605DE8362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7468D14E-A2C9-4C78-A715-A64605DE8362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7468D14E-A2C9-4C78-A715-A64605DE8362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7468D14E-A2C9-4C78-A715-A64605DE8362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
