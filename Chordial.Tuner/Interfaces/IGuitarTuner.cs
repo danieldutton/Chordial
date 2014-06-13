@@ -4,6 +4,6 @@ namespace Chordial.Tuner.Interfaces
 {
     public interface IGuitarTuner
     {
-        void TuneString(GuitarString guitarString, FretSpace[,] fretboard);
+        void TuneString(GuitarString stringToTune, FretSpace[,] fretboard);
     }
 }

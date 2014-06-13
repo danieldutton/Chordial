@@ -14,10 +14,11 @@ namespace Chordial.UnitTests.Luthier.Model
                 Note = "A",
                 XPos = 1,
                 YPos = 1,
+                IsPressed = true,
                 ResourceName = "resource"
             };
 
-            const string expected = "[FretSpace] Note:A XPos:1 YPos1 ResourceName:resource";
+            const string expected = "[FretSpace] Note:A XPos:1 YPos1 IsPressed:True ResourceName:resource";
             string actual = sut.ToString();
 
             Assert.AreEqual(expected, actual);

@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChromaticScale.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IScaleGenerator.cs" />
     <Compile Include="Model\Scale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

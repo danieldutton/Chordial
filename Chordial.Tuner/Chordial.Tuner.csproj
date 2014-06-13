@@ -35,9 +35,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IGuitarTuner.cs" />
-    <Compile Include="SixStringGuitarTuner.cs" />
+    <Compile Include="GuitarTuner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tuner.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chordial.Luthier\Chordial.Luthier.csproj">
