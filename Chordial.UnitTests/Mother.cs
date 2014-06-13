@@ -166,11 +166,11 @@ namespace Chordial.UnitTests
         } 
 
         //lets use this to simplify luther tests
-        public static IEnumerable<int> FretBoardXPosSequence()
+        public static IEnumerable<int> ExpectedXPosSequence()
         {
             IEnumerable<int> range = Enumerable.Range(0, 24);
 
             return range;
-        } 
+        }
     }
 }

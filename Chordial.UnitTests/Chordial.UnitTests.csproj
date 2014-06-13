@@ -43,7 +43,6 @@
     <Compile Include="Chords\Foo.cs" />
     <Compile Include="Luthier\GuitarLuthier_Should.cs" />
     <Compile Include="Luthier\Model\FretSpace_Should.cs" />
-    <Compile Include="Sandbox\SandBox.cs" />
     <Compile Include="Mother.cs" />
     <Compile Include="Tuner\GuitarTuner_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

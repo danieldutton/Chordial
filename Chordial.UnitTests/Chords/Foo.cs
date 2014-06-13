@@ -8,7 +8,13 @@ namespace Chordial.UnitTests.Chords
         [Test]
         public void FooBar()
         {
-            
+            //to map a chord
+   
+            //take the fretboard
+
+            //apply a pattern of all chord positions and set
+
+            //fretspace isPressedProperty to true
         }
     }
 }

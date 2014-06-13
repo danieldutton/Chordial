@@ -19,8 +19,8 @@ namespace Chordial.Luthier
                 {
                     notes[i, j] = new FretSpace
                     {
-                        XPos = i,
-                        YPos = j,
+                        XPos = j,
+                        YPos = i,
                     };
                 }
             }

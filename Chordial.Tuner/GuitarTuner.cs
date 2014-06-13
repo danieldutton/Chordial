@@ -20,14 +20,15 @@ namespace Chordial.Tuner
             _map = map;
         }
 
-        public void TuneString(GuitarString stringToTune, FretSpace[,] fretboard)
+        public FretSpace[,] TuneString(GuitarString stringToTune, FretSpace[,] fretboard)
         {
-            if(Enum.IsDefined(typeof(GuitarString), stringToTune))
+            if (fretboard == null) throw new ArgumentNullException("fretboard");
+            
+            //can we extension method this in utilities
+            if(!Enum.IsDefined(typeof(GuitarString), stringToTune))
                 stringToTune = GuitarString.A;
 
-            if(fretboard == null) throw new ArgumentNullException("fretboard");
-            
-            var stringToScaleMap = _map.GetMap();
+            Dictionary<GuitarString, Scale> stringToScaleMap = _map.GetMap();
 
             Scale scale = stringToScaleMap[stringToTune];
             
@@ -43,13 +44,12 @@ namespace Chordial.Tuner
                     break;
 
                 if (i == notes.Count())
-                {
                     i = 0;
-                }
                
                 //tune the string
-               
-            }    
+                fretboard[(int) stringToTune, i].Note = notes[i]; 
+            }
+            return fretboard;
         }      
     }
 }

@@ -17,6 +17,7 @@ namespace Chordial.UnitTests.Scales
             _sut = new ChromaticScale();
         }
 
+        //is scale naming consistent with other classes
         [Test]
         public void GetScale_ReturnChromaticScaleA_IfEnumIsUndefined()
         {

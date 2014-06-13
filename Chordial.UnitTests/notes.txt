@@ -1,0 +1,23 @@
+﻿//Fretboard Structure
+    /*
+          0  1  2  3  4  5  6  7  8
+     E(0)[ ][ ][ ][ ][ ][*][ ][ ][ ]
+     B(1)[*][ ][ ][ ][ ][*][ ][ ][ ]
+     G(2)[ ][*][ ][ ][ ][*][ ][ ][ ]
+     D(3)[ ][*][ ][ ][ ][*][ ][*][ ]
+     A(4)[ ][ ][ ][ ][ ][*][ ][*][ ]
+     E(5)[ ][ ][ ][ ][ ][*][ ][ ][ ]
+     
+     */
+
+	 /*
+ Need to check the theory behind note naming i.e should it be a sharp or a flat etc
+ * Do we need to represent both sharp and flat at the same time to avoid confusion
+ */
+
+/*
+ Further ideas
+ * 
+ * Can note store wav file we can play and listen to.  Can we record the chord and listen to that also
+ 
+ */
