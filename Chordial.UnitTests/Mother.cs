@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Chordial.Luthier.Model;
+using Chordial.Scales.Model;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Chordial.UnitTests
@@ -134,6 +136,34 @@ namespace Chordial.UnitTests
 
             return scaleGSharp;
         }
+
+        public static List<GuitarString> ExpectedKeySequence_StandardTuning()
+        {
+            var keys = new List<GuitarString>
+            {
+                GuitarString.ELow,
+                GuitarString.A,
+                GuitarString.D,
+                GuitarString.G,
+                GuitarString.B,
+                GuitarString.EHigh,
+            };
+            return keys;
+        }
+
+        public static List<Scale> ExpectedValueSequence_StandardTuning()
+        {
+            var keys = new List<Scale>
+            {
+                Scale.E,
+                Scale.A,
+                Scale.D,
+                Scale.G,
+                Scale.B,
+                Scale.E,
+            };
+            return keys;
+        } 
 
         //lets use this to simplify luther tests
         public static IEnumerable<int> FretBoardXPosSequence()

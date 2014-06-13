@@ -3,11 +3,12 @@
 namespace Chordial.UnitTests.Tuner
 {
     [TestFixture]
-    public class NoteGenerator_Should
+    public class GuitarTuner_Should
     {
         [Test]
         public void Foo()
         {
+            
         }
     }
 }

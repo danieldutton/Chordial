@@ -45,9 +45,10 @@
     <Compile Include="Luthier\Model\FretSpace_Should.cs" />
     <Compile Include="Sandbox\SandBox.cs" />
     <Compile Include="Mother.cs" />
-    <Compile Include="Tuner\NoteGenerator_Should.cs" />
+    <Compile Include="Tuner\GuitarTuner_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scales\ChromaticScale_Should.cs" />
+    <Compile Include="Tuner\StandardTuningMap_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
