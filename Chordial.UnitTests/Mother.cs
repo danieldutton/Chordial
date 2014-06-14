@@ -165,7 +165,6 @@ namespace Chordial.UnitTests
             return keys;
         } 
 
-        //lets use this to simplify luther tests
         public static IEnumerable<int> ExpectedXPosSequence()
         {
             IEnumerable<int> range = Enumerable.Range(0, 24);

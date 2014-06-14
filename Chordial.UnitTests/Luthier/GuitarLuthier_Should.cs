@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Chordial.UnitTests.Luthier
 {
-    //Tests assume a six string guitar with fret lengths 20 & 24
+    //Tests assume a six string guitar with fret lengths 24
 
     [TestFixture]
     public class GuitarLuthier_Should
