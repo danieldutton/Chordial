@@ -35,16 +35,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IChordMapper.cs" />
+    <Compile Include="Minor\Foo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Major\" />
-    <Folder Include="Minor\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chordial.Luthier\Chordial.Luthier.csproj">
       <Project>{FE522BF9-A297-4481-B683-2FF45FC9F468}</Project>
       <Name>Chordial.Luthier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chordial.Scales\Chordial.Scales.csproj">
+      <Project>{CAEC2B80-9562-4E2A-9F5D-A375864A8BAF}</Project>
+      <Name>Chordial.Scales</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chordial.Utility\Chordial.Utility.csproj">
       <Project>{7468D14E-A2C9-4C78-A715-A64605DE8362}</Project>

@@ -40,7 +40,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chords\Foo.cs" />
+    <Compile Include="Chords\Foo_Should.cs" />
     <Compile Include="Luthier\GuitarLuthier_Should.cs" />
     <Compile Include="Luthier\Model\FretSpace_Should.cs" />
     <Compile Include="Mother.cs" />
@@ -53,6 +53,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Chordial.Chords\Chordial.Chords.csproj">
+      <Project>{A5E050B0-8991-40C8-8EF7-0F9C63F2DA5E}</Project>
+      <Name>Chordial.Chords</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Chordial.Luthier\Chordial.Luthier.csproj">
       <Project>{FE522BF9-A297-4481-B683-2FF45FC9F468}</Project>
       <Name>Chordial.Luthier</Name>

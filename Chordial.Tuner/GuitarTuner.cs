@@ -23,8 +23,7 @@ namespace Chordial.Tuner
         public FretSpace[,] TuneString(GuitarString stringToTune, FretSpace[,] fretboard)
         {
             if (fretboard == null) throw new ArgumentNullException("fretboard");
-            
-            //can we extension method this in utilities
+
             if(!Enum.IsDefined(typeof(GuitarString), stringToTune))
                 stringToTune = GuitarString.A;
 
@@ -46,7 +45,6 @@ namespace Chordial.Tuner
                 if (i == notes.Count())
                     i = 0;
                
-                //tune the string
                 fretboard[(int) stringToTune, i].Note = notes[i]; 
             }
             return fretboard;

@@ -85,7 +85,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void Buildinstrument_InitXPosPropertiesCorrectly_ELow()
+        public void Buildinstrument_InitXPosPropertiesCorrectly_ELowString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -98,7 +98,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void BuildInstrument_InitYPosPropertiesCorrectly_ELow()
+        public void BuildInstrument_InitYPosPropertiesCorrectly_ELowString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -111,7 +111,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void Buildinstrument_InitXPosPropertiesCorrectly_A()
+        public void Buildinstrument_InitXPosPropertiesCorrectly_AString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -125,7 +125,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void BuildInstrument_InitYPosPropertiesCorrectly_A()
+        public void BuildInstrument_InitYPosPropertiesCorrectly_AString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -139,7 +139,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void Buildinstrument_InitXPosPropertiesCorrectly_D()
+        public void Buildinstrument_InitXPosPropertiesCorrectly_DString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -153,7 +153,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void BuildInstrument_InitYPosPropertiesCorrectly_D()
+        public void BuildInstrument_InitYPosPropertiesCorrectly_DString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -167,7 +167,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void Buildinstrument_InitXPosPropertiesCorrectly_G()
+        public void Buildinstrument_InitXPosPropertiesCorrectly_GString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -181,7 +181,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void BuildInstrument_InitYPosPropertiesCorrectly_G()
+        public void BuildInstrument_InitYPosPropertiesCorrectly_GString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -195,7 +195,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void Buildinstrument_InitXPosPropertiesCorrectly_B()
+        public void Buildinstrument_InitXPosPropertiesCorrectly_BString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -209,7 +209,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void BuildInstrument_InitYPosPropertiesCorrectly_B()
+        public void BuildInstrument_InitYPosPropertiesCorrectly_BString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 
@@ -223,7 +223,7 @@ namespace Chordial.UnitTests.Luthier
         }
 
         [Test]
-        public void Buildinstrument_InitXPosPropertiesCorrectly_EHigh()
+        public void Buildinstrument_InitXPosPropertiesCorrectly_EHighString()
         {
             FretSpace[,] guitar = _sut.BuildInstrument();
 

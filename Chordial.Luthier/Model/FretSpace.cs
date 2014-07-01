@@ -13,7 +13,8 @@ namespace Chordial.Luthier.Model
         public bool IsPressed { get; set; }
         
         public string ResourceName { get; set; }
-        
+
+
 
         public override string ToString()
         {
